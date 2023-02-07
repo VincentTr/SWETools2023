@@ -1,0 +1,130 @@
+<!--
+    Author: Vincent Truong
+    Class: CS341
+    Homework: #1 & #2
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vincent Truong Homework 1 CS341- SWE</title>
+
+
+    <!--Connection between index.html and style.css-->
+    <link rel="stylesheet" href="./stylesheets/style.css">
+
+
+    <!--Adding Google Fonts Web Service (Raleway)-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display&family=Handlee&family=Kaushan+Script&family=Merienda:wght@300&family=Monoton&family=Poppins:wght@700&family=Raleway&family=Shadows+Into+Light&family=Unbounded:wght@600&display=swap" rel="stylesheet">
+
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/>
+</script>
+
+</head>
+<body>
+    <div>
+        <h1>Cheesecake Order Form</h1>
+    <!--Got the plain cheese cake img from "Copy Image Address"-->
+    <img src="https://sugargeekshow.com/wp-content/uploads/2022/12/cherry_cheesecake_featured-4-of-6-scaled.jpg" alt="cherry cheesecake" width="300px" height="300px">
+    </div>
+
+    <h3 id="qt-title">Quantity Toppings</h3>
+
+    <!--Section 1 Includes Options of Flavors and Quantity-->
+    <div class="section-one" style="display: flex;">
+
+        <div style="display:flex; margin-right: 20px;">
+            <select id="toppings-dropdown" name="topping-options">
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+            </select>
+        </div>
+
+        <form id="topping-selector" style="display: flex; flex-direction: column;">
+
+            <div>
+                <input type="radio" id="plain" name="cheesecake-choice" value="PLAIN">
+                <label for="plain">Plain</label>
+            </div>
+
+            <div>
+                <input type="radio" id="cherry" name="cheesecake-choice" value="CHERRY">
+                <label for="cherry">Cherry</label>
+            </div>
+
+            <div>
+                <input type="radio" id="chocolate" name="cheesecake-choice" value="CHOCOLATE">
+                <label for="chocolate">Chocolate</label>
+            </div>
+
+        </form>
+
+        <div id="order-complete-message">
+            <h1>Thank you!</h1>
+            <h1>Your order has been placed.</h1>
+        </div>
+
+    </div>
+
+    <!--Section 2 Includes the Notes Section with the Textarea special accomidations comment(s) and order button-->
+    <div class="section-two">
+
+        <div id="note-section" class="notes-section" style="width: 50vw; display: flex; flex-direction: column;">
+            <h3 style="margin-top: 20px;">Notes:</h3>
+            <textarea id="comment-section" placeholder="Enter any special instructions here" style="width: 400px; height: 10vw;"></textarea>
+            <button id="order-button" style="width: 50px; margin-top:10px;">Order</button>
+        </div>
+
+        <div id="complete-order-list">
+            <!--This div will contain all of the elements that the user has ordered using the javascript script and jQuery Libraries-->
+        </div>
+
+    </div>
+    <div>
+        <h2>Orders for <button class="month-button">Jan</button></h2>
+    <!--Source: https://stackoverflow.com/questions/46031812/on-hover-mega-menu-doesnt-appears-->
+    <div class="row">
+        <div class="month-div">
+          <ul>
+            <li><a value="Jan">Jan</a></li>
+            <li><a value="Feb">Feb</a></li>
+            <li><a value="Mar">Mar</a></li>
+            <li><a value="Apr">Apr</a></li>
+            <li><a value="May">May</a></li>
+            <li><a value="Jun">Jun</a></li>
+            <li><a value="Jul">Jul</a></li>
+            <li><a value="Aug">Aug</a></li>
+            <li><a value="Sep">Sep</a></li>
+            <li><a value="Oct">Oct</a></li>
+            <li><a value="Nov">Nov</a></li>
+            <li><a value="Dec">Dec</a></li>
+          </ul>
+        </div>
+      </div>
+
+        <ul>
+            <li>11 Cherry</li>
+            <li>17 Chocolate</li>
+            <li>31 Plain</li>
+        </ul>
+    </div>
+    <!--Displays an unordered list of list items for sold items within last month-->
+</body>
+<div class="footer-div" style="margin-top:4vh;">
+    <footer>
+        <p>Copyright © Vincent Truong. All rights reserved</p>
+    </footer>
+
+
+<!----------------------------------------------------->    
+<!--THIS IS THE START OF THE Javascript JQuery Script-->
+<!-----------------------------------------------------> 
+<script src="javascripts/cheesecake.js"></script>
+</div>
+</html>
